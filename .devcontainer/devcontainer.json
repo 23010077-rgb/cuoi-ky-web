@@ -1,0 +1,17 @@
+{
+  "name": "My Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/node:2.1.0": {
+      "version": "lts"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot"
+      ]
+    }
+  },
+  "postCreateCommand": "npm i -g @nestjs/cli && npm install --save @nestjs/typeorm typeorm mysql2 && npm install"
+}
